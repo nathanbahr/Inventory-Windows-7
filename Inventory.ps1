@@ -9,7 +9,7 @@
     $Timestamp = Get-Date -Format o | foreach {$_ -replace ":", "."}
 
 #Destination Folder
-    $DestinationFolder = '.\Computers\LMS-old\Inventory'
+    $DestinationFolder = '.\Computers'
     $DestinationFolderPath = Test-Path $DestinationFolder
         If ($DestinationFolderPath -eq 'True') 
         {
@@ -529,7 +529,7 @@
         if ($TestInventoryFull -like "False")
         {
             #Makes the CSV file.
-            Write-Output 'ID,Hostname,Timestamp,Serial Number,Manufacturer,Model Number,DHCP,IP Address,Subnet Mask,Second IP,Second Subnet,Default Gateway,Primary DNS,Backup DNS,Primary WINS,Backup WINS,Domain,MAC Address,Network Adapter,Adapter Type,CPU Name,Physical Cores,Logical Cores,Max Frequency,Memory,Free Memory,Pct Used,System Type,Username,Admin Privileges,TeamViewer,AMD GPU,NVIDIA GPU,Intel GPU,Googele Drive,Capacity,Used,Free,Percent Used,Windows Key,OS Name,OS Number,OS Build,SMBIOS,BIOS Version,BIOS Date/Name,Internet Explorer,Firefox 32-bit,Firefox 64-bit,Chrome,Flash,Flash NPAPI,Flash PPAPI,Java,Adobe Reader,PowerShell,AMD Driver,NVIDIA Driver,Intel Driver,McAfee,IP1,IP2,IP3,IP4' >> $DestinationFolder\InventoryFull.csv
+            Write-Output 'Identification,Hostname,Timestamp,Serial Number,Manufacturer,Model Number,DHCP,IP Address,Subnet Mask,Second IP,Second Subnet,Default Gateway,Primary DNS,Backup DNS,Primary WINS,Backup WINS,Domain,MAC Address,Network Adapter,Adapter Type,CPU Name,Physical Cores,Logical Cores,Max Frequency,Memory,Free Memory,Pct Used,System Type,Username,Admin Privileges,TeamViewer,AMD GPU,NVIDIA GPU,Intel GPU,Googele Drive,Capacity,Used,Free,Percent Used,Windows Key,OS Name,OS Number,OS Build,SMBIOS,BIOS Version,BIOS Date/Name,Internet Explorer,Firefox 32-bit,Firefox 64-bit,Chrome,Flash,Flash NPAPI,Flash PPAPI,Java,Adobe Reader,PowerShell,AMD Driver,NVIDIA Driver,Intel Driver,McAfee,IP1,IP2,IP3,IP4' >> $DestinationFolder\InventoryFull.csv
         }
 
 
